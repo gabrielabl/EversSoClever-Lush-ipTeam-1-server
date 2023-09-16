@@ -28,7 +28,7 @@ router.get('/:productID', (req, res)=>{
 
 // Get product by product category
 
-router.get('/:productCategory', (req, res)=>{
+router.get('/category/:productCategory', (req, res)=>{
     const {productCategory} = req.params;
     knex('product').where({category:productCategory}).then(product=>{
         res.status(200).json(product)
@@ -40,7 +40,7 @@ router.get('/:productCategory', (req, res)=>{
 
 // Get product by user recent purchase
 
-router.get('/:userID', (res, req)=>{
+router.get('/user/:userID', (req, res)=>{
     const {userID} = req.params;
     knex.select(
         'product.id as id',
