@@ -1,6 +1,7 @@
 const userData = require('./seeds_data/user');
 const productData = require('./seeds_data/product');
 const transactionData = require('./seeds_data/transaction');
+const categoryData = require('./seeds_data/category')
 
 
 exports.seed = function (knex) {
@@ -15,6 +16,11 @@ exports.seed = function (knex) {
     })
     .then(()=>{
         return knex('transaction').insert(transactionData);
+    }).then(()=>{
+        return knex('category').del();
+    })
+    .then(()=>{
+        return knex('category').insert(categoryData);
     })
 }
 
