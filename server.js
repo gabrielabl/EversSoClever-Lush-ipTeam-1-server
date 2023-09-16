@@ -3,6 +3,13 @@ const cors = require("cors");
 const app = express();
 const UserRoutes = require('./routes/UserRoutes')
 
+
+// Routes
+const productRoutes = require('./routes/product');
+
+app.use('/product', productRoutes);
+
+
 //MIDDLEWARE
 require("dotenv").config();
 const { PORT, CORS_ORIGIN} = process.env;
