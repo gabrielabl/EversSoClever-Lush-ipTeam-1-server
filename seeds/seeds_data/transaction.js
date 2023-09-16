@@ -72,9 +72,9 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: '124022ed-ad3c-467c-ad2d-30632d0f5504',
+        id: 'dab38937-b6ad-4298-9eba-a290da3bcc2e',
         user_id: "bc62c34e-5b78-4366-a354-4fb9d338b6f8", 
-        product_id: "10", 
+        product_id: "124022ed-ad3c-467c-ad2d-30632d0f5504", 
         total: "15.99",
         created_at: new Date(),
         updated_at: new Date(),
