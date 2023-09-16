@@ -1,14 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
-
-
-// Routes
 const ProductRoutes = require('./routes/ProductRoutes');
-app.use('/product', ProductRoutes);
 const UserRoutes = require('./routes/UserRoutes');
-app.use('/user', UserRoutes);
 
 
 //MIDDLEWARE
@@ -24,6 +18,8 @@ app.get("/", (_req, res) => {
   res.send("Hello");
 });
 
-
+// Routes
+app.use('/product', ProductRoutes);
+app.use('/user', UserRoutes);
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
