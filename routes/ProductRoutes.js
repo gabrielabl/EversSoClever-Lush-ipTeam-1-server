@@ -50,8 +50,9 @@ router.get('/user/:userID', (req, res)=>{
         'category',
         'product_image',
         'transaction.user_id as user_id',
+        'transaction.created_at as purchase_date'
         ).from('product').join('transaction','product.id','transaction.product_id')
-        .where({user_id:userID}).then(userProducts=>{
+        .where({user_id:userID}).orderBy('purchase_date','asc').then(userProducts=>{
             res.status(200).json(userProducts)
         }).catch(err=>{
             res.status(400).send(`Invalid user ID ${err}`)
