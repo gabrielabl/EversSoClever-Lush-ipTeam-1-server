@@ -14,4 +14,50 @@ router.get('/', (req, res)=>{
     })
 })
 
+
+// Get product by product ID
+
+router.get('/:productID', (req, res)=>{
+    const {productID} = req.params;
+    knex('product').where({id:productID}).then(product=>{
+        res.status(200).json(product)
+    }).catch(err=>{
+        res.status(400).send(`Invalid product ID ${err}`)
+    })
+})
+
+// Get product by product category
+
+router.get('/:productCategory', (req, res)=>{
+    const {productCategory} = req.params;
+    knex('product').where({category:productCategory}).then(product=>{
+        res.status(200).json(product)
+    }).catch(err=>{
+        res.status(400).send(`Invalid product Category ${err}`)
+    })
+})
+
+
+// Get product by user recent purchase
+
+router.get('/:userID', (res, req)=>{
+    const {userID} = req.params;
+    knex.select(
+        'product.id as id',
+        'product_name',
+        'product_price',
+        'quantity',
+        'category',
+        'product_image',
+        'transaction.user_id as user_id',
+        ).from('product').join('transaction','product.id','transaction.product_id')
+        .where({user_id:userID}).then(userProducts=>{
+            res.status(200).json(userProducts)
+        }).catch(err=>{
+            res.status(400).send(`Invalid user ID ${err}`)
+        })
+    
+})
+
+
 module.exports = router;
