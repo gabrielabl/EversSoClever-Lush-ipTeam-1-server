@@ -6,7 +6,7 @@ exports.up = function (knex) {
     table.string("user_pronouns").notNullable();
     table.string("contact_phone").notNullable();
     table.text("name_pronunciation").notNullable();
-    table.string("user_icon").notNullable();
+    table.string("user_icon").collate('utf8mb4_unicode_ci').notNullable();
     table.timestamps(true, true);
   });
 };
