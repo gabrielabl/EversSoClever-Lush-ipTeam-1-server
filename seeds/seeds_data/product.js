@@ -1,6 +1,6 @@
 module.exports = [
     {
-        id: generateUUID(),
+        id: '27ffabac-c0da-4196-8e38-1028cb0b53e2',
         product_name: "Luxurious Shampoo",
         product_price: "19.99",
         quantity: 100,
@@ -10,7 +10,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '42a9eb42-b22f-49b0-9502-c296462dd10c',
         product_name: "Organic Body Wash",
         product_price: "14.99",
         quantity: 75,
@@ -20,7 +20,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '3288c35a-920a-4fe9-be4e-5559d561806a',
         product_name: "Natural Hand Soap",
         product_price: "9.99",
         quantity: 50,
@@ -30,7 +30,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '4b91bf3c-4d44-4829-a5e8-965658469dca',
         product_name: "Refreshing Face Cleanser",
         product_price: "24.99",
         quantity: 60,
@@ -40,7 +40,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '5b1d0cd7-a632-4b74-a19d-8d522e595d3b',
         product_name: "Aromatherapy Bath Bombs",
         product_price: "29.99",
         quantity: 40,
@@ -50,7 +50,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '5bab05c0-8876-40c9-864f-569712ba53e0',
         product_name: "Soothing Lavender Lotion",
         product_price: "12.99",
         quantity: 80,
@@ -60,7 +60,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '087c8236-4a00-4c40-8d50-de87d3384b39',
         product_name: "Exfoliating Face Scrub",
         product_price: "16.99",
         quantity: 70,
@@ -70,7 +70,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: 'e18e590e-1acf-4365-8664-a60e1ca1822a',
         product_name: "Moisturizing Lip Balm",
         product_price: "4.99",
         quantity: 120,
@@ -80,7 +80,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '124022ed-ad3c-467c-ad2d-30632d0f5504',
         product_name: "Eucalyptus Shower Gel",
         product_price: "15.99",
         quantity: 55,
@@ -90,7 +90,7 @@ module.exports = [
         updated_at: new Date(),
       },
       {
-        id: generateUUID(),
+        id: '39e98830-e638-4cdf-a4c4-bc9e29596051',
         product_name: "Revitalizing Hair Conditioner",
         product_price: "17.99",
         quantity: 90,
