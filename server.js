@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const createUserRoute = require('./routes/createUserRoute')
+const UserRoutes = require('./routes/UserRoutes')
 
 //MIDDLEWARE
 require("dotenv").config();
@@ -19,8 +19,8 @@ app.get("/", (_req, res) => {
 
 //ROUTES
 
-//CREATE NEW USER
-app.use('/user', createUserRoute)
+// USER ROUTES
+app.use('/user', UserRoutes)
 
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
