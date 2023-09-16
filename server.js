@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const createUserRoute = require('./routes/createUserRoute')
 
 //MIDDLEWARE
 require("dotenv").config();
@@ -14,6 +15,12 @@ app.use(express.static("public/images")); // MAKE STATIC FILES FROM PUBLIC AVALI
 app.get("/", (_req, res) => {
   res.send("Hello");
 });
+
+
+//ROUTES
+
+//CREATE NEW USER
+app.use('/user', createUserRoute)
 
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
