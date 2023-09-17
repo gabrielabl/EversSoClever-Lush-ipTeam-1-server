@@ -142,7 +142,7 @@ module.exports = [
     id: uuidv4(),
     category_name: "shampoo",
     category_image:
-      "https://www.lush.ca/en/hair/shampoo/rehab-salty/9999962174.html",
+      "https://www.lush.ca/dw/image/v2/BDMQ_PRD/on/demandware.static/-/Sites-lushcosmetics-export/default/dwc58b9b0b/images/product/62174_4.jpg?sw=450&sh=450",
   },
   {
     id: uuidv4(),

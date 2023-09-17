@@ -36,12 +36,12 @@ mv .env.sample .env
   
 5. Update environment variable to local server
 
-- `CORS_ORIGIN=<Include the localhost for the urbanfarmer-client>`
+- `CORS_ORIGIN=<Include the localhost for the lush-industry-project-team-1-client>`
 - `PORT=<include a free port>`
 - `DB_LOCAL_DBNAME=<mySQL database name>`
 - `DB_LOCAL_USER=<mySQL your username>`
 - `DB_LOCAL_PASSWORD=<mySQL password>`
--`DB_LOCAL_HOST=<mySQL localhost>`
+- `DB_LOCAL_HOST=<mySQL localhost>`
 
 6. Database migration
 
@@ -61,4 +61,17 @@ npm run seed
 node server.js
 ```
 
+## END POINTS
 
+### Create new user
+- HTTP post - /user 
+## Get User by Phone Number
+- HTTP get - /user/:phoneNumber
+## Get Product list
+- HTTP get - /product
+## GEt Product By ID
+- HTTP get - /product/:productId
+## Get Product By Category
+- HTTP get - /product/category/:categoryName
+## Get Product by UserID aka User transactions
+- HTTP get - /product/user/:userID
