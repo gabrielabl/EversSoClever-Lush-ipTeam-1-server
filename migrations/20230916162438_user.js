@@ -3,9 +3,9 @@ exports.up = function (knex) {
     table.uuid("id").primary();
     table.string("user_name").notNullable();
     table.string("user_email").notNullable();
-    table.string("user_pronouns").notNullable();
+    table.string("user_pronouns");
     table.string("contact_phone").notNullable();
-    table.text("name_pronunciation").notNullable();
+    table.text("name_pronunciation");
     table.string("user_icon").collate('utf8mb4_unicode_ci').notNullable();
     table.timestamps(true, true);
   });

@@ -7,7 +7,7 @@ const UserRoutes = require('./routes/UserRoutes');
 
 //MIDDLEWARE
 require("dotenv").config();
-const { PORT, CORS_ORIGIN} = process.env;
+const { PORT, CORS_ORIGIN } = process.env;
 app.use(cors({ origin: CORS_ORIGIN })); // ENABLE CORS AND PREVENTS OTHER FRONT END FROM ACCESSING BACK END
 app.use(express.json()); // PARSE INCOMING JSON DATA
 app.use(express.static("public/images")); // MAKE STATIC FILES FROM PUBLIC AVALIABLE
