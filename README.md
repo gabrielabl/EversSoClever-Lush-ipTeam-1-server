@@ -69,8 +69,8 @@ node server.js
 - HTTP get - /user/:phoneNumber
 ## Get Product list
 - HTTP get - /product
-## GEt Product By ID
-- HTTP get - /product/:productId
+## Get Product By ID
+- HTTP get - /product/:productID
 ## Get Product By Category
 - HTTP get - /product/category/:categoryName
 ## Get Product by UserID aka User transactions
