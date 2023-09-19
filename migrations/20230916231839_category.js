@@ -3,6 +3,7 @@ exports.up = function (knex) {
       table.uuid("id").primary();
       table.string("category_name").notNullable();
       table.string("category_image").notNullable();
+      table.string("category_description").notNullable();
       table.timestamps(true, true);
     });
   };
