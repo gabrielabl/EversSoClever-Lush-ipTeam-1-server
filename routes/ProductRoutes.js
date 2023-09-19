@@ -9,7 +9,7 @@ require("dotenv").config();
 router.get("/", (req, res) => {
   knex("product")
   .join("category", "product.category", "category.category_name")
-  .select("product.id","product_name", "product_price", "category", "category.category_image as product_image")
+  .select("product.id","product_name", "product_price", "category", "category.category_image as product_image", "category.category_description as product_description")
     .then((products) => {
       res.status(200).json(products);
     })
@@ -25,7 +25,7 @@ router.get("/:productID", (req, res) => {
   knex("product")
     .where("product.id", productID )
     .join("category", "product.category", "category.category_name")
-    .select("product.id","product_name", "product_price", "category", "category.category_image as product_image")
+    .select("product.id","product_name", "product_price", "category", "category.category_image as product_image", "category.category_description as product_description")
     .then((product) => {
       res.status(200).json(product);
     })

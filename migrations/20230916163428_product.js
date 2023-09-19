@@ -3,6 +3,8 @@ exports.up = function (knex) {
     table.uuid("id").primary();
     table.string("product_name").notNullable();
     table.string("product_price").notNullable();
+    table.integer("product_online_stock").notNullable();
+    table.integer("product_inshop_stock").notNullable();
     table.string('category').notNullable();
     table.timestamps(true, true);
   });
