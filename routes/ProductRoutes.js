@@ -8,8 +8,17 @@ require("dotenv").config();
 
 router.get("/", (req, res) => {
   knex("product")
-  .join("category", "product.category", "category.category_name")
-  .select("product.id","product_name", "product_price", "category", "category.category_image as product_image", "category.category_description as product_description")
+    .join("category", "product.category", "category.category_name")
+    .select(
+      "product.id",
+      "product_name",
+      "product_price",
+      "product_online_stock",
+      "product_inshop_stock",
+      "category",
+      "category.category_image as product_image",
+      "category.category_description as product_description"
+    )
     .then((products) => {
       res.status(200).json(products);
     })
@@ -23,9 +32,18 @@ router.get("/", (req, res) => {
 router.get("/:productID", (req, res) => {
   const { productID } = req.params;
   knex("product")
-    .where("product.id", productID )
+    .where("product.id", productID)
     .join("category", "product.category", "category.category_name")
-    .select("product.id","product_name", "product_price", "category", "category.category_image as product_image", "category.category_description as product_description")
+    .select(
+      "product.id",
+      "product_name",
+      "product_price",
+      "product_online_stock",
+      "product_inshop_stock",
+      "category",
+      "category.category_image as product_image",
+      "category.category_description as product_description"
+    )
     .then((product) => {
       res.status(200).json(product);
     })
@@ -39,6 +57,17 @@ router.get("/:productID", (req, res) => {
 router.get("/category/:productCategory", (req, res) => {
   const { productCategory } = req.params;
   knex("product")
+    .join("category", "product.category", "category.category_name")
+    .select(
+      "product.id",
+      "product_name",
+      "product_price",
+      "product_online_stock",
+      "product_inshop_stock",
+      "category",
+      "category.category_image as product_image",
+      "category.category_description as product_description"
+    )
     .where({ category: productCategory })
     .then((product) => {
       res.status(200).json(product);
